@@ -2,6 +2,10 @@
 
 A robust, Multi-Page Application (MPA) built to demonstrate server-side rendering, RESTful routing, and advanced RDBMS data modeling. This project implements a complete Category and Product Master with relational integrity and server-side pagination.
 
+## Demo Video
+[screen-capture (3).webm](https://github.com/user-attachments/assets/e9a50f21-8dc2-485c-990b-039adf4943fd)
+
+
 ## 🚀 Tech Stack
 
 * **Backend:** Node.js, Express.js
