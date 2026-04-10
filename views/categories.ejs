@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card p-4">
+            <h4>Add Category</h4>
+            <form action="/categories/add" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Category Name</label>
+                    <input type="text" name="categoryName" class="form-control" placeholder="e.g. Electronics" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save Category</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card p-4">
+            <h4>Category List</h4>
+            <table class="table table-striped mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Category Name</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% categories.forEach(cat => { %>
+                        <tr>
+                            <td><%= cat.id %></td>
+                            <td><%= cat.name %></td>
+                            <td class="text-center">
+                                <a href="/categories/edit/<%= cat.id %>" class="btn btn-warning btn-sm">Edit</a>
+                                
+                                <form action="/categories/delete/<%= cat.id %>" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Deleting this category will delete all associated products. Continue?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
