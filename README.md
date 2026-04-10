@@ -37,7 +37,8 @@ cd node-machine-test
 npm install
 ```
 
-**3. Configure Environment Variables**
+**3. Configure Environment Variables**:
+
 Create a .env file in the root directory and add your PostgreSQL connection string (Neon/Supabase recommended).
 
 ```bash
@@ -45,7 +46,8 @@ DATABASE_URL=postgresql://user:password@hostname/dbname?sslmode=require
 PORT=3000
 ```
 
-**4. Initialize the Database Schema**
+**4. Initialize the Database Schema**:
+
 Run the built-in seed script. This automatically connects to your database, builds the categories and products tables, and enforces the schema rules.
 
 ```bash
@@ -58,7 +60,8 @@ npm start
 # OR for development: npm run dev
 ```
 
-**6. Access the Application**
+**6. Access the Application**:
+
 Open your browser and navigate to http://localhost:3000.
 
 
